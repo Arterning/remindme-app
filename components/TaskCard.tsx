@@ -6,6 +6,7 @@ import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { setTaskToDone } from "@/actions/task";
 import { useRouter } from "next/navigation";
+import { useConfettiStore } from "@/hooks/use-confetti-store";
 
 function getExpirationColor(expiresAt: Date) {
   const days = Math.floor(expiresAt.getTime() - Date.now()) / 1000 / 60 / 60;
@@ -19,6 +20,7 @@ function getExpirationColor(expiresAt: Date) {
 
 function TaskCard({ task }: { task: Task }) {
   const [isLoading, startTransition] = useTransition();
+  const confetti = useConfettiStore();
   const router = useRouter();
   return (
     <div className="flex gap-2 items-start">
@@ -30,6 +32,7 @@ function TaskCard({ task }: { task: Task }) {
         onCheckedChange={() => {
           startTransition(async () => {
             await setTaskToDone(task.id);
+            confetti.onOpen();
             router.refresh();
           });
         }}

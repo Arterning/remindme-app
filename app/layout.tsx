@@ -5,6 +5,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { Separator } from "@/components/ui/separator";
 import NavBar from "@/components/NavBar";
 import { ThemeProvider } from "@/providers/ThemeProvider";
+import { ConfettiProvider } from '@/providers/ConfettiProvider'
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/toaster";
 
@@ -45,6 +46,7 @@ export default function RootLayout({
               <main className="flex flex-grow w-full justify-center items-center dark:bg-neutral-950">
                 {children}
                 <Toaster />
+                <ConfettiProvider />
               </main>
             </div>
           </ThemeProvider>

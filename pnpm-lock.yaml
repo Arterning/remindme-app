@@ -137,6 +137,9 @@ dependencies:
   react:
     specifier: 18.2.0
     version: registry.npmmirror.com/react@18.2.0
+  react-confetti:
+    specifier: ^6.1.0
+    version: registry.npmmirror.com/react-confetti@6.1.0(react@18.2.0)
   react-day-picker:
     specifier: ^8.8.1
     version: registry.npmmirror.com/react-day-picker@8.10.0(date-fns@2.30.0)(react@18.2.0)
@@ -161,6 +164,9 @@ dependencies:
   zod:
     specifier: ^3.22.2
     version: registry.npmmirror.com/zod@3.22.4
+  zustand:
+    specifier: ^4.4.7
+    version: registry.npmmirror.com/zustand@4.4.7(@types/react@18.2.21)(react@18.2.0)
 
 devDependencies:
   prisma:
@@ -5209,6 +5215,19 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  registry.npmmirror.com/react-confetti@6.1.0(react@18.2.0):
+    resolution: {integrity: sha512-7Ypx4vz0+g8ECVxr88W9zhcQpbeujJAVqL14ZnXJ3I23mOI9/oBVTQ3dkJhUmB0D6XOtCZEM6N0Gm9PMngkORw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-confetti/-/react-confetti-6.1.0.tgz}
+    id: registry.npmmirror.com/react-confetti/6.1.0
+    name: react-confetti
+    version: 6.1.0
+    engines: {node: '>=10.18'}
+    peerDependencies:
+      react: ^16.3.0 || ^17.0.1 || ^18.0.0
+    dependencies:
+      react: registry.npmmirror.com/react@18.2.0
+      tween-functions: registry.npmmirror.com/tween-functions@1.2.0
+    dev: false
+
   registry.npmmirror.com/react-day-picker@8.10.0(date-fns@2.30.0)(react@18.2.0):
     resolution: {integrity: sha512-mz+qeyrOM7++1NCb1ARXmkjMkzWVh2GL9YiPbRjKe0zHccvekk4HE+0MPOZOrosn8r8zTHIIeOUXTmXRqmkRmg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/react-day-picker/-/react-day-picker-8.10.0.tgz}
     id: registry.npmmirror.com/react-day-picker/8.10.0
@@ -5923,6 +5942,12 @@ packages:
     version: 2.6.2
     dev: false
 
+  registry.npmmirror.com/tween-functions@1.2.0:
+    resolution: {integrity: sha512-PZBtLYcCLtEcjL14Fzb1gSxPBeL7nWvGhO5ZFPGqziCcr8uvHp0NDmdjBchp6KHL+tExcg0m3NISmKxhU394dA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/tween-functions/-/tween-functions-1.2.0.tgz}
+    name: tween-functions
+    version: 1.2.0
+    dev: false
+
   registry.npmmirror.com/type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/type-check/-/type-check-0.4.0.tgz}
     name: type-check
@@ -6233,4 +6258,27 @@ packages:
     resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zod/-/zod-3.22.4.tgz}
     name: zod
     version: 3.22.4
+    dev: false
+
+  registry.npmmirror.com/zustand@4.4.7(@types/react@18.2.21)(react@18.2.0):
+    resolution: {integrity: sha512-QFJWJMdlETcI69paJwhSMJz7PPWjVP8Sjhclxmxmxv/RYI7ZOvR5BHX+ktH0we9gTWQMxcne8q1OY8xxz604gw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/zustand/-/zustand-4.4.7.tgz}
+    id: registry.npmmirror.com/zustand/4.4.7
+    name: zustand
+    version: 4.4.7
+    engines: {node: '>=12.7.0'}
+    peerDependencies:
+      '@types/react': '>=16.8'
+      immer: '>=9.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      '@types/react': registry.npmmirror.com/@types/react@18.2.21
+      react: registry.npmmirror.com/react@18.2.0
+      use-sync-external-store: registry.npmmirror.com/use-sync-external-store@1.2.0(react@18.2.0)
     dev: false
